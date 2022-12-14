@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+@import url("https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css");
+@import url("https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+
+.cursive {
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.prose img {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+.content{
+    word-wrap: break-word;      /* IE 5.5-7 */
+      white-space: -moz-pre-wrap; /* Firefox 1.0-2.0 */
+      white-space: pre-wrap; 
+}
+blockquote{
+  overflow-x: auto;
+  word-wrap: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar li{
+  /* margin-right: 30px; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.categories{
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.categories span{
+  margin-bottom: 15px;
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.categories:hover ul{
+  display: block;
+}
+
+.categories ul{
+  display: none;
+  position: absolute;
+  /* left: -20px; */
+  background-color: antiquewhite;
+}
+
+.categories ul li{
+  padding: 10px 20px;
+  border-radius: 20px;
+  
+}
+
+.categories ul li:hover{
+  background-color: aqua;
 }
