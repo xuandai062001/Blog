@@ -1,7 +1,7 @@
 // src/App.js
 
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, BrowserRouter, Route, Routes } from "react-router-dom";
 import AllPosts from "./components/AllPosts.js";
 import OnePost from "./components/OnePost.js";
 import Header from "./components/Header.js";
@@ -10,7 +10,7 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
 
       <Header />
       <div>
@@ -22,7 +22,7 @@ function App() {
        <Route element={<FilteredPosts />} path="/FilteredPosts/:title" />
       </Routes>
       </div>
-    </BrowserRouter>
+      </HashRouter>
   );
 }
 export default App;
