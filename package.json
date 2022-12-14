@@ -1,6 +1,6 @@
 {
   "name": "davidblog",
-  "homepage": "http://blog.xuandai.live/",
+  "homepage": "http://blog.xuandai.live/#/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
