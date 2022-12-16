@@ -10,7 +10,7 @@ export default function FilterPosts() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "post" && "${title}" in categories[]->title]{
+        `*[_type == "post" && "${title}" in categories[]->title] | order(publishedAt desc){
         title,
         slug,
         mainImage{
@@ -23,7 +23,9 @@ export default function FilterPosts() {
       )
       .then((data) => setAllPosts(data))
       .catch(console.error);
-  }, [allPostsData]);
+  }, [allPostsData, title]);
+
+  if (!allPostsData) return <div>Loading...</div>;
 
   return (
     <div className="bg-green-100 min-h-screen sm: p-4 md:p-12">

@@ -7,7 +7,7 @@ import sanityClient from "../Client.js";
 import PaginatedItems from "./Pagination/PaginatedItems.js";
 
 
-export default function AllPosts() {
+export default function Pagination() {
 
   const [allPostsData, setAllPosts] = useState([]);
 

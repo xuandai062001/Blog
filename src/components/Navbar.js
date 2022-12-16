@@ -26,7 +26,7 @@ const NavBar = () => {
 			<ul className="flex navbar">
 				<li>
 					<NavLink
-						to="/"
+						to={"/"}
 						exact
 						className="nav-link"
 						activeClassName="active-link"
@@ -50,7 +50,7 @@ const NavBar = () => {
 						))}
 					</ul>
 				</li>
-				<a className="pl-4" href="https://profile.xuandai.live/" target="_blank">About Me</a>
+				<a className="pl-4" href="https://profile.xuandai.live/">About Me</a>
 			</ul>
 			
 		</nav>

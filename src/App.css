@@ -57,3 +57,31 @@ blockquote{
 .categories ul li:hover{
   background-color: aqua;
 }
+
+
+/* pagination */
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pagination .page-item .page-link{
+  padding: 5px 10px;
+  background-color: blue;
+  color: white;
+  border: 1px solid red;
+  display: block;
+}
+
+.pagination .page-item.disabled > .page-link{
+  background-color: #EBEBE4;
+  border-color: #EBEBE4;
+  color: black;
+}
+
+.pagination .page-item.active > .page-link{
+  background-color: red;
+}
+
